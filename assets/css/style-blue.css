@@ -2851,7 +2851,8 @@ input::placeholder {
 }
 .social-links ul li a {
   display: block;
-  color: rgba(34, 34, 34, 0.4);
+  /* color: rgba(34, 34, 34, 0.4); */
+  color: rgb(0, 0, 0);
 }
 .social-links ul li a:hover {
   color: #222;
@@ -4585,7 +4586,7 @@ input::placeholder {
 }
 
 .footer-desc {
-  color: #f1f1f1;
+  color: #000;
   margin-bottom: 35px;
   max-width: 370px;
 }
@@ -4689,7 +4690,7 @@ input::placeholder {
   }
 }
 .footer-widget__title {
-  color: #fff;
+  color: #000;
   margin-bottom: 40px;
   font-size: 0.875rem;
 }
@@ -4735,7 +4736,7 @@ input::placeholder {
   padding-bottom: 0;
 }
 .footer-widget__navigation li a {
-  color: #f1f1f1;
+  color: #000;
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   line-height: 1.2;
@@ -6411,7 +6412,7 @@ input::placeholder {
 }
 
 .dark-bg {
-  background-color: #111;
+  background-color: #ffffff;
 }
 .dark-bg--style2 {
   background-color: #11202d;
@@ -7952,7 +7953,8 @@ a.scroll-top.show {
 }
 .industry-six-slider__background {
   min-height: 715px;
-  background-size: cover;
+  background-size: contain;
+  margin-left: 100px;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -7964,11 +7966,15 @@ a.scroll-top.show {
 @media only screen and (max-width: 767px) {
   .industry-six-slider__background {
     min-height: 400px;
+    margin-left: 0;
+    background-size: cover;
   }
 }
 @media only screen and (max-width: 479px) {
   .industry-six-slider__background {
     min-height: 350px;
+    margin-left: 0;
+    background-size: cover;
   }
 }
 
