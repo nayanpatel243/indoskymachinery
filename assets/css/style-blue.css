@@ -8237,7 +8237,7 @@ a.scroll-top.show {
   color: #0c95ec;
 }
 .testimonial-slider__nav-container
-  .ht-swiper-button-nav
+  .ht-swiper-button-nav 
   + .ht-swiper-button-nav:before {
   position: absolute;
   top: 50%;
@@ -12720,17 +12720,24 @@ a.scroll-top.show {
 .industry-icon-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 100px 30px;
   margin-left: -15px;
   margin-right: -15px;
   margin-top: -25px;
   margin-bottom: -40px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px),
-  only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .industry-icon-wrapper {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 386px) {
+  .industry-icon-wrapper {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
