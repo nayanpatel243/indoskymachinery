@@ -17,7 +17,7 @@
         }
 
         // Set the recipient email address.
-        $recipient = "test@hasthemes.com";
+        $recipient = "support@indoskymachinery.com";
 
         // Set the email subject.
         $subject = "Mail From $name";
