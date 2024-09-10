@@ -1661,6 +1661,29 @@
 
   /*=====  End of progress bar active  ======*/
 
+
+  const swiper = new Swiper('.feature-background-slider__container', {
+    loop: true, // Enable looping
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      slideChange: function () {
+        const nextIndex = this.activeIndex + 1 >= this.slides.length ? 0 : this.activeIndex + 1;
+        const prevIndex = this.activeIndex - 1 < 0 ? this.slides.length - 1 : this.activeIndex - 1;
+        
+        const nextSlideImage = this.slides[nextIndex].querySelector('.bg-img').getAttribute('data-bg');
+        const prevSlideImage = this.slides[prevIndex].querySelector('.bg-img').getAttribute('data-bg');
+        
+        document.querySelector('.swiper-button-next .swiper-button-image').style.backgroundImage = `url(${nextSlideImage})`;
+        document.querySelector('.swiper-button-prev .swiper-button-image').style.backgroundImage = `url(${prevSlideImage})`;
+      }
+    }
+  });
+  
+
+
   /*=============================================
     =            quantity counter            =
     =============================================*/
