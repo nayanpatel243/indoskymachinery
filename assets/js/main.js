@@ -1663,10 +1663,14 @@
 
 
   const swiper = new Swiper('.feature-background-slider__container', {
-    loop: true, // Enable looping
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
     },
     on: {
       slideChange: function () {
@@ -1676,14 +1680,12 @@
         const nextSlideImage = this.slides[nextIndex].querySelector('.bg-img').getAttribute('data-bg');
         const prevSlideImage = this.slides[prevIndex].querySelector('.bg-img').getAttribute('data-bg');
         
-        document.querySelector('.swiper-button-next .swiper-button-image').style.backgroundImage = `url(${nextSlideImage})`;
-        document.querySelector('.swiper-button-prev .swiper-button-image').style.backgroundImage = `url(${prevSlideImage})`;
+        document.querySelector('.swiper-button-next1 .swiper-button-image').style.backgroundImage = `url(${nextSlideImage})`;
+        document.querySelector('.swiper-button-prev1 .swiper-button-image').style.backgroundImage = `url(${prevSlideImage})`;
       }
     }
   });
   
-
-
   /*=============================================
     =            quantity counter            =
     =============================================*/

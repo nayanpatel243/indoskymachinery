@@ -11808,33 +11808,28 @@ a.scroll-top.show {
   color: #0c95ec;
 }
 
-/* Hide only the default blue arrow, but keep the button background */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none; /* Hide the default arrow icon */
-}
 
-/* Your custom button styles */
+/* swiper */
 .swiper-button-custom {
   position: absolute;
   top: 50%;
-  width: 70px;  /* Larger circle */
-  height: 70px; /* Larger circle */
-  background-color: rgba(0.5, 0.5, 0.5, 0.5);
+  width: 70px;  /* Circle size */
+  height: 70px; /* Circle size */
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity and color if needed */
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.swiper-button-prev {
+.swiper-button-prev1 {
   left: 10px;
 }
 
-.swiper-button-next {
+.swiper-button-next1 {
   right: 10px;
 }
 
@@ -11852,12 +11847,24 @@ a.scroll-top.show {
   opacity: 1;
 }
 
-.swiper-button-next, .swiper-button-prev {
-  font-size: 10px;
-  color: white; /* Custom arrow color */
+.swiper-button-arrow {
+  position: absolute;
+  font-size: 23px; /* Adjust the size of the arrow */
+  color: white;
+  z-index: 20; /* Ensure it's above the background image */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Perfectly centers the arrow */
+  pointer-events: none; /* So the arrow doesn't interfere with button interaction */
 }
 
+.swiper-button-prev1 .swiper-button-arrow {
+  content: '\f104'; /* This will ensure the left arrow icon */
+}
 
+.swiper-button-next1 .swiper-button-arrow {
+  content: '\f105'; /* This will ensure the right arrow icon */
+}
 
 
 
