@@ -4621,7 +4621,7 @@ input::placeholder {
   color: white;
 }
 
-.infinite-slider-content button {
+.infinite-slider-content a {
   border: none;
   color: white;
   font-size: 1rem;
@@ -4655,9 +4655,10 @@ input::placeholder {
 
 .footer-logo {
   margin-bottom: 35px;
+  padding-left: 20px;
 }
 .footer-logo a img {
-  width: 60%;
+  width: 47%;
 }
 .footer-logo--style2 {
   margin-bottom: 170px;
@@ -6921,9 +6922,9 @@ video {
   .infinite-slider-wrapper {
     height: 80vh;
   }
-  
+
   .infinite-slider-content h1 {
-    font-size: 63px; 
+    font-size: 63px;
   }
 
   /* .mobile-menu-overlay {
@@ -6963,13 +6964,14 @@ video {
 /*  */
 
 .machine-wrapper {
-  max-width: 1100px;
+  width: 100%;
   margin: auto;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  padding: 30px;
+  padding: 30px 60px;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .machine-header {
@@ -8292,8 +8294,10 @@ a.scroll-top.show {
 }
 
 .industry-six-slider__area {
-  width: 85vw;
+  width: 100%;
+  padding: 0 60px;
 }
+
 .industry-six-slider__container-area .swiper-pagination {
   top: auto;
   bottom: calc(50% - 280px);
@@ -8447,7 +8451,7 @@ a.scroll-top.show {
   color: #ffffff;
 }
 .industry-six-slider__content .see-more-link:hover {
-  color: #222;
+  color: #cecdcd;
 }
 .industry-six-slider__content .see-more-link:after {
   display: none;
@@ -8658,93 +8662,27 @@ a.scroll-top.show {
   align-items: center;
 }
 
-.swiper {
-  width: 100%;
-  padding: 40px 0;
-}
-
-.mySwiper {
+.indosky-slider-container {
   overflow: hidden;
-}
-
-.swiper-slide {
-  border-radius: 15px;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Video block layout */
-.video-container {
-  position: relative;
   width: 100%;
-  height: 550px;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 10px 0;
 }
 
-/* Video player */
-.slide-video {
+.indosky-slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.indosky-slide {
+  flex: 0 0 20%; /* 5 slides per view */
+  padding: 0 5px;
+}
+
+.indosky-video {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #d3d3d3;
-}
-
-/* Control buttons */
-.control-buttons {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
-.control-buttons button {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 12px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.control-buttons button:hover {
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #000;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .video-container {
-    height: 84vh;
-    padding: 0 20px;
-    background: white;
-  }
-
-  .control-buttons button {
-    padding: 6px 10px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .video-container {
-    height: 84vh;
-    padding: 0 20px;
-    background: white;
-  }
-
-  .control-buttons button {
-    padding: 5px 8px;
-    font-size: 13px;
-  }
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /*  */
@@ -8763,7 +8701,7 @@ a.scroll-top.show {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-bottom: 20px;
+  padding: 70px 0 20px 0;
   border-bottom: 1px solid #eee;
 }
 @media only screen and (max-width: 479px) {
@@ -8774,7 +8712,8 @@ a.scroll-top.show {
     flex-direction: column;
     -webkit-box-align: start;
     -ms-flex-align: start;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    padding-bottom: 0 !important;
   }
 }
 .testimonial-slider__title {
@@ -9065,6 +9004,7 @@ a.scroll-top.show {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    height: 780px;
   }
 }
 .testimonial-slider__single-item--style2
@@ -13463,7 +13403,7 @@ a.scroll-top.show {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  /* gap: 100px 30px;  */
+  gap: 60px 30px;
   margin-left: -15px;
   margin-right: -15px;
   margin-top: -25px;

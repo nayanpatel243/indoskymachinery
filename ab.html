@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite 123456 Video Slider</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #000;
+      }
+
+      .slider-container {
+        overflow: hidden;
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      .slider-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        flex: 0 0 20%; /* 100 / 5 = 20% */
+        padding: 0 5px;
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <!-- Slides will be inserted by JavaScript -->
+      </div>
+    </div>
+
+    <script>
+      const videoSources = [
+        "1..mp4",
+        "2..mp4",
+        "3..mp4",
+        "4..mp4",
+        "5..mp4",
+        "6..mp4",
+      ];
+      const baseURL =
+        "https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/image/";
+
+      const track = document.getElementById("sliderTrack");
+      const visibleSlides = 5;
+      let index = 0;
+
+      // Initialize slides (clone a few to support infinite scroll)
+      const totalVideos = videoSources.length;
+      const allSlides = [...videoSources, ...videoSources, ...videoSources]; // repeat 3x
+
+      allSlides.forEach((src) => {
+        const div = document.createElement("div");
+        div.className = "slide";
+        div.innerHTML = `
+        <video src="${baseURL + src}" autoplay muted controls loop></video>
+      `;
+        track.appendChild(div);
+      });
+
+      const slide = document.querySelector(".slide");
+      const slideWidth = slide.offsetWidth;
+
+      setInterval(() => {
+        index++;
+        track.style.transition = "transform 0.5s ease-in-out";
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+        // Reset logic for infinite scroll illusion
+        if (index >= allSlides.length - visibleSlides) {
+          setTimeout(() => {
+            track.style.transition = "none";
+            index = 0;
+            track.style.transform = `translateX(0px)`;
+          }, 600); // wait for animation to finish
+        }
+      }, 5000); // every 5 seconds
+    </script>
+  </body>
+</html>
