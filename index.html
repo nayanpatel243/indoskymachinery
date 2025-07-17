@@ -6,14 +6,10 @@
     <title>Indosky Machinery</title>
     <meta name="description" content="indosky machinery" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="icon"
-      href="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/icons/icon.ico"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="./assets/img/icons/icon.ico" type="image/x-icon" />
     <link
       rel="shortcut icon"
-      href="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/icons/icon.ico"
+      href="./assets/img/icons/icon.ico"
       type="image/x-icon"
     />
 
@@ -23,25 +19,15 @@
     />
 
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
-
     <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css" />
-
     <link rel="stylesheet" href="assets/css/vendor/ionicons.min.css" />
-
     <link rel="stylesheet" href="assets/css/vendor/flaticon.min.css" />
-
     <link rel="stylesheet" href="assets/css/vendor/icomoon.min.css" />
-
     <link rel="stylesheet" href="assets/css/vendor/tractor-icon.min.css" />
-
     <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
-
     <link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
-
     <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
-
     <link rel="stylesheet" href="assets/css/style-blue.css" />
-
     <link href="assets/revolution/css/settings.css" rel="stylesheet" />
     <link href="assets/revolution/css/navigation.css" rel="stylesheet" />
     <link href="assets/revolution/custom-setting.css" rel="stylesheet" />
@@ -49,19 +35,20 @@
 
   <body>
     <!--====================  preloader ====================-->
-    <div class="preloader-activate preloader-active">
+    <!-- <div class="preloader-activate preloader-active">
       <div class="preloader-area-wrap">
         <div
           class="spinner d-flex justify-content-center align-items-center h-100"
         >
           <img
             loading="lazy"
-            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/preloader.gif"
+            src="./assets/img/preloader.gif"
             alt=""
           />
         </div>
       </div>
-    </div>
+    </div> -->
+
     <!--====================  End of preloader  ====================-->
     <!--====================  header area ====================-->
     <div class="header-area header-sticky">
@@ -77,51 +64,30 @@
                   <a href="./index.html">
                     <img
                       loading="lazy"
-                      src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/logo/Indosky.png"
+                      src="./assets/img/logo/Indosky.png"
                       class="img-fluid"
                       alt=""
                     />
                   </a>
                 </div>
-                <div
-                  class="header-navigation-wrapper header-navigation-wrapper--style4"
-                >
-                  <div class="header-navigation-wrapper--style3__left">
-                    <div
-                      class="header-navigation__nav header-navigation__nav--style5 position-static"
-                    >
-                      <nav>
-                        <ul>
-                          <li class="has-children">
-                            <a href="./index.html">HOME</a>
-                          </li>
-                          <li
-                            class="has-children has-children--multilevel-submenu"
-                          >
-                            <a href="./product.html">PRODUCTS</a>
-                          </li>
-                          <li class="has-children">
-                            <a href="./about_us.html">ABOUT US</a>
-                          </li>
-                          <li
-                            class="has-children has-children--multilevel-submenu"
-                          >
-                            <a href="./contact.html">CONTACT</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                  <div class="header-navigation-wrapper--style3__right"></div>
-                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="header-navigation">
+                  <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about_us.html">About Us</a></li>
+                    <li><a href="./product.html">Products</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>
         </div>
-        <!--=======  End of header navigation area =======-->
       </div>
+
+      <!-- Mobile Header -->
       <div class="header-area__mobile">
-        <!--=======  mobile menu  =======-->
         <div class="mobile-menu-area">
           <div class="container">
             <div class="row align-items-center">
@@ -131,7 +97,7 @@
                   <a href="./index.html">
                     <img
                       loading="lazy"
-                      src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/logo/Indosky.png"
+                      src="./assets/img/logo/Indosky.png"
                       class="img-fluid"
                       alt=""
                     />
@@ -142,16 +108,32 @@
                 <!-- mobile menu content -->
                 <div class="mobile-menu-content">
                   <div class="mobile-navigation-icon" id="mobile-menu-trigger">
-                    <i></i>
+                    <button class="hamburger" id="hamburger">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!--=======  End of mobile menu  =======-->
       </div>
     </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <button class="close-btn" id="closeBtn">&times;</button>
+      <nav>
+        <a href="./index.html" class="mobile-nav-item">Home</a>
+        <a href="./about_us.html" class="mobile-nav-item">About Us</a>
+        <a href="./product.html" class="mobile-nav-item">Products</a>
+        <a href="./contact.html" class="mobile-nav-item">Contact</a>
+      </nav>
+    </div>
+
     <!--====================  End of header area  ====================-->
     <!--====================  hero slider area ====================-->
     <div class="infinite-slider-wrapper">
@@ -159,9 +141,7 @@
         <!-- Slide 1 -->
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_1.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_1.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -177,9 +157,7 @@
         <!-- Slide 2 -->
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_2.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_2.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -192,9 +170,7 @@
         <!-- Slide 3 -->
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_3.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_3.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -210,9 +186,7 @@
         <!-- Duplicate Slide 1 -->
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_1.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_1.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -228,9 +202,7 @@
         <!-- Duplicate Slide 2 -->
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_2.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_2.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -243,9 +215,7 @@
         <!-- Duplicate Slide 3 -->
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_3.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_3.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -262,9 +232,7 @@
 
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_1.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_1.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -280,9 +248,7 @@
         <!-- Duplicate Slide 2 -->
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_2.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_2.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -295,9 +261,7 @@
         <!-- Duplicate Slide 3 -->
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_3.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_3.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -312,9 +276,7 @@
         <!--  -->
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_1.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_1.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -330,9 +292,7 @@
         <!-- Duplicate Slide 2 -->
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_2.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_2.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -345,9 +305,7 @@
         <!-- Duplicate Slide 3 -->
         <div
           class="infinite-slider-slide"
-          style="
-            background-image: url('https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/slider/slide_3.jpg');
-          "
+          style="background-image: url('./assets/img/slider/slide_3.jpg')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -364,7 +322,7 @@
     <!--====================  End of hero slider area  ====================-->
     <!--====================  industry icon area ====================-->
     <div class="industry-icon-area section-space--inner--120" id="aboutus">
-      <div class="container">
+      <div class="container industry-container">
         <div class="row">
           <div class="col-lg-12">
             <div class="industry-icon-wrapper">
@@ -373,7 +331,7 @@
                   <div class="single-industry-icon__image">
                     <img
                       loading="lazy"
-                      src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/icons/no-1.png"
+                      src="./assets/img/icons/no-1.png"
                       class="img-fluid"
                       alt=""
                     />
@@ -395,7 +353,7 @@
                   <div class="single-industry-icon__image">
                     <img
                       loading="lazy"
-                      src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/icons/all-in-one.png"
+                      src="./assets/img/icons/all-in-one.png"
                       class="img-fluid"
                       alt=""
                     />
@@ -417,7 +375,7 @@
                   <div class="single-industry-icon__image">
                     <img
                       loading="lazy"
-                      src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/icons/settings.png"
+                      src="./assets/img/icons/settings.png"
                       class="img-fluid"
                       alt=""
                     />
@@ -438,7 +396,7 @@
                   <div class="single-industry-icon__image">
                     <img
                       loading="lazy"
-                      src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/icons/research.png"
+                      src="./assets/img/icons/research.png"
                       class="img-fluid"
                       alt=""
                     />
@@ -459,7 +417,7 @@
                   <div class="single-industry-icon__image">
                     <img
                       loading="lazy"
-                      src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/icons/support.png"
+                      src="./assets/img/icons/support.png"
                       class="img-fluid"
                       alt=""
                     />
@@ -480,7 +438,7 @@
                   <div class="single-industry-icon__image">
                     <img
                       loading="lazy"
-                      src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/icons/contact.png"
+                      src="./assets/img/icons/contact.png"
                       class="img-fluid"
                       alt=""
                     />
@@ -501,7 +459,6 @@
         </div>
       </div>
     </div>
-
     <!--  -->
 
     <div class="indosky-slider-container">
@@ -552,7 +509,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Kishorbhai_1.jpg"
+                            src="./assets/img/customers/Kishorbhai.jpg"
                             class="img-fluid"
                             alt=""
                           />
@@ -591,7 +548,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Nileshbhai_&_nitinbhai.jpg"
+                            src="./assets/img/customers/Nileshbhai_&_nitinbhai.jpg"
                             class="img-fluid"
                             alt=""
                           />
@@ -629,7 +586,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Jigabhai_.jpg "
+                            src="./assets/img/customers/Jigabhai_.jpg "
                             class="img-fluid"
                             alt=""
                           />
@@ -667,7 +624,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Sagarbhai.jpg"
+                            src="./assets/img/customers/Sagarbhai.jpg"
                             class="img-fluid"
                             alt=""
                           />
@@ -709,7 +666,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Bhargavbhai.jpg"
+                            src="./assets/img/customers/Bhargavbhai.jpg"
                             class="img-fluid"
                             alt=""
                           />
@@ -750,7 +707,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Rambhai.jpg"
+                            src="./assets/img/customers/Rambhai.jpg"
                             class="img-fluid"
                             alt=""
                           />
@@ -791,7 +748,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Mayurbhai.jpg"
+                            src="./assets/img/customers/Mayurbhai.jpg"
                             class="img-fluid"
                             alt=""
                           />
@@ -832,7 +789,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Amrutbhai.jpg"
+                            src="./assets/img/customers/Amrutbhai.jpg"
                             class="img-fluid"
                             alt=""
                           />
@@ -871,7 +828,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Nitinbhai.jpeg"
+                            src="./assets/img/customers/Nitinbhai.jpeg"
                             class="img-fluid"
                             alt=""
                           />
@@ -911,7 +868,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Ashishbhai.jpeg"
+                            src="./assets/img/customers/Ashishbhai.jpeg"
                             class="img-fluid"
                             alt=""
                           />
@@ -951,7 +908,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Rakeshbha_Avaiya.jpeg"
+                            src="./assets/img/customers/Rakeshbha_Avaiya.jpeg"
                             class="img-fluid"
                             alt=""
                           />
@@ -993,7 +950,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Vaibhavbhai_Avaiya.jpeg"
+                            src="./assets/img/customers/Vaibhavbhai_Avaiya.jpeg"
                             class="img-fluid"
                             alt=""
                           />
@@ -1036,7 +993,7 @@
                         <div class="testimonial-slider__single-item__image">
                           <img
                             loading="lazy"
-                            src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/customers/Ketanbha_Lathiya.jpeg"
+                            src="./assets/img/customers/Ketanbha_Lathiya.jpeg"
                             class="img-fluid"
                             alt=""
                           />
@@ -1089,7 +1046,7 @@
       <a href="#">
         <img
           loading="lazy"
-          src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/logo/Indosky.png"
+          src="./assets/img/logo/Indosky.png"
           class="img-fluid"
           alt=""
         />
@@ -1099,7 +1056,7 @@
       <div class="">
         <div
           class="support-footer__single support-footer__single--white-text bg-img"
-          data-bg="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/icons/message_1.png"
+          data-bg="./assets/img/icons/message_1.png"
         >
           Email: support@indoskymachinery.com
         </div>
@@ -1147,57 +1104,62 @@
     <div class="white"></div>
     <!--====================  End of footer area  ====================-->
     <!--====================  mobile menu overlay ====================-->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-      <div class="mobile-menu-overlay__header">
-        <div class="container-fluid--cp-60">
-          <div class="row align-items-center">
-            <div class="col-md-4 col-sm-6 col-9">
-              <!-- logo -->
-              <div class="logo">
-                <a href="./index.html">
-                  <img
-                    loading="lazy"
-                    src="https://raw.githubusercontent.com/nayanpatel243/indosky-resources/57c4fd4afc56e39049e88b8236b4e107ed1b23bd/img/logo/Indosky.png"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="col-md-8 col-sm-6 col-3">
-              <!-- mobile menu content -->
-              <div class="mobile-menu-content">
-                <a
-                  class="mobile-navigation-close-icon"
-                  id="mobile-menu-close-trigger"
-                  href="javascript:void(0)"
-                >
-                  <i class="ion-ios-close-empty"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mobile-menu-overlay__body">
-        <nav class="offcanvas-navigation">
-          <ul>
-            <li class="has-children">
-              <a href="./index.html">Home</a>
-            </li>
-            <li class="has-children">
-              <a href="./about_us.html">About Us</a>
-            </li>
-            <li class="has-children">
-              <a href="./product.html">Products</a>
-            </li>
-            <li class="has-children">
-              <a href="./contact.html">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+        const mobileBackdrop = document.getElementById("mobileBackdrop");
+        const closeBtn = document.getElementById("closeBtn");
+        const mobileNavItems = document.querySelectorAll(".mobile-nav-item");
+
+        // Toggle menu function
+        function toggleMenu() {
+          hamburger.classList.toggle("active");
+          mobileMenuOverlay.classList.toggle("active");
+          mobileBackdrop.classList.toggle("active");
+
+          // Prevent body scroll when menu is open
+          if (mobileMenuOverlay.classList.contains("active")) {
+            document.body.style.overflow = "hidden";
+          } else {
+            document.body.style.overflow = "";
+          }
+        }
+
+        // Close menu function
+        function closeMenu() {
+          hamburger.classList.remove("active");
+          mobileMenuOverlay.classList.remove("active");
+          mobileBackdrop.classList.remove("active");
+          document.body.style.overflow = "";
+        }
+
+        // Event listeners
+        hamburger.addEventListener("click", toggleMenu);
+        closeBtn.addEventListener("click", closeMenu);
+        mobileBackdrop.addEventListener("click", closeMenu);
+
+        // Close menu when clicking on menu items
+        mobileNavItems.forEach((item) => {
+          item.addEventListener("click", closeMenu);
+        });
+
+        // Close menu on escape key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            closeMenu();
+          }
+        });
+
+        // Close menu on window resize (desktop view)
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 991) {
+            closeMenu();
+          }
+        });
+      });
+    </script>
     <!--====================  End of mobile menu overlay  ====================-->
     <!--====================  search overlay ====================-->
     <div class="search-overlay" id="search-overlay">
@@ -1273,13 +1235,20 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!--=====  End of JS files ======-->
+
     <!--=====  video slider ======-->
     <script>
-      const indoskyVideos = ["1..mp4", "2..mp4", "3..mp4", "4..mp4"];
+      const indoskyVideos = [
+        "video-1.mp4",
+        "video-2.mp4",
+        "video-3.mp4",
+        "video-4.mp4",
+        "video-5.mp4",
+        "video-6.mp4",
+      ];
       const indoskyBaseURL = "./assets/image/";
-
       const indoskyTrack = document.getElementById("indoskySliderTrack");
-      const indoskyVisibleSlides = 5;
+      const indoskyVisibleSlides = 5; // For reset condition
       let indoskyIndex = 0;
 
       // Repeat slides for infinite loop
@@ -1289,35 +1258,39 @@
         ...indoskyVideos,
       ];
 
+      // Inject video slides into the track
       indoskyAllSlides.forEach((videoFile) => {
         const slideDiv = document.createElement("div");
         slideDiv.className = "indosky-slide";
         slideDiv.innerHTML = `
         <video class="indosky-video" src="${
           indoskyBaseURL + videoFile
-        }" autoplay muted loop></video>
+        }" autoplay muted loop playsinline></video>
       `;
         indoskyTrack.appendChild(slideDiv);
       });
 
-      const indoskySingleSlide = document.querySelector(".indosky-slide");
-      const indoskySlideWidth = indoskySingleSlide.offsetWidth;
+      // Wait for layout to render before calculating width
+      window.addEventListener("load", () => {
+        const indoskySingleSlide = document.querySelector(".indosky-slide");
+        const indoskySlideWidth = indoskySingleSlide.offsetWidth;
 
-      setInterval(() => {
-        indoskyIndex++;
-        indoskyTrack.style.transition = "transform 0.5s ease-in-out";
-        indoskyTrack.style.transform = `translateX(-${
-          indoskyIndex * indoskySlideWidth
-        }px)`;
+        setInterval(() => {
+          indoskyIndex++;
+          indoskyTrack.style.transition = "transform 0.5s ease-in-out";
+          indoskyTrack.style.transform = `translateX(-${
+            indoskyIndex * indoskySlideWidth
+          }px)`;
 
-        if (indoskyIndex >= indoskyAllSlides.length - indoskyVisibleSlides) {
-          setTimeout(() => {
-            indoskyTrack.style.transition = "none";
-            indoskyIndex = 0;
-            indoskyTrack.style.transform = `translateX(0px)`;
-          }, 600);
-        }
-      }, 5000); // Slide every 5s
+          if (indoskyIndex >= indoskyAllSlides.length - indoskyVisibleSlides) {
+            setTimeout(() => {
+              indoskyTrack.style.transition = "none";
+              indoskyIndex = 0;
+              indoskyTrack.style.transform = `translateX(0px)`;
+            }, 600);
+          }
+        }, 5000); // Slide every 5s
+      });
     </script>
     <!-- main slider  -->
 
