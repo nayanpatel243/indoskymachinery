@@ -91,7 +91,7 @@
 
   <body>
     <!--====================  preloader ====================-->
-    <div class="preloader-activate preloader-active">
+    <!-- <div class="preloader-activate preloader-active">
       <div class="preloader-area-wrap">
         <div
           class="spinner d-flex justify-content-center align-items-center h-100"
@@ -99,7 +99,7 @@
           <img loading="lazy" src="./assets/img/preloader.gif" alt="" />
         </div>
       </div>
-    </div>
+    </div> -->
     <!--====================  End of preloader  ====================-->
     <!--====================  header area ====================-->
     <div class="header-area header-sticky">
@@ -126,7 +126,7 @@
                 <nav class="header-navigation">
                   <ul>
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about_us.html">About</a></li>
+                    <li><a class="curOpen" href="./about_us.html">About</a></li>
                     <li><a href="./product.html">Products</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                   </ul>
@@ -201,9 +201,16 @@
       Your browser does not support the video tag.
     </video> -->
 
-    <video autoplay loop muted playsinline>
-      <source src="./assets/image/WEB-LOG-VIDEO.mp4" type="video/mp4" />
-    </video>
+    <div class="video-container">
+      <div class="video-loader" id="videoLoader">
+        <div class="spinner"></div>
+      </div>
+
+      <video autoplay loop muted playsinline id="videoElement">
+        <source src="./assets/image/WEB-LOG-VIDEO.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
     <!--  -->
     <div class="wrapper">
@@ -250,48 +257,48 @@
       <div class="a3b73_slider_track">
         <!-- 6 original images -->
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/1-min.png" alt="1" />
+          <img src="./assets/image/1-min.png" alt="1" />
         </div>
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/2-min.png" alt="2" />
+          <img src="./assets/image/2-min.png" alt="2" />
         </div>
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/3-min.png" alt="3" />
+          <img src="./assets/image/3-min.png" alt="3" />
         </div>
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/4-min.png" alt="4" />
+          <img src="./assets/image/4-min.png" alt="4" />
         </div>
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/5-min.png" alt="5" />
+          <img src="./assets/image/5-min.png" alt="5" />
         </div>
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/6-min.png" alt="6" />
+          <img src="./assets/image/6-min.png" alt="6" />
         </div>
 
         <!-- Clone for smooth infinite scroll -->
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/1-min.png" alt="1" />
+          <img src="./assets/image/1-min.png" alt="1" />
         </div>
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/2-min.png" alt="2" />
+          <img src="./assets/image/2-min.png" alt="2" />
         </div>
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/3-min.png" alt="3" />
+          <img src="./assets/image/3-min.png" alt="3" />
         </div>
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/4-min.png" alt="4" />
+          <img src="./assets/image/4-min.png" alt="4" />
         </div>
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/5-min.png" alt="5" />
+          <img src="./assets/image/5-min.png" alt="5" />
         </div>
         <div class="m8e21_slide_item">
-          <img loading="lazy" src="./assets/image/6-min.png" alt="6" />
+          <img src="./assets/image/6-min.png" alt="6" />
         </div>
       </div>
     </div>
     <!--  -->
 
-    <div class="video-row-container">
+    <!-- <div class="video-row-container">
       <div class="single-video-wrapper">
         <video class="custom-video-player" autoplay loop muted playsinline>
           <source src="./assets/image/about1.mp4" type="video/mp4" />
@@ -304,6 +311,56 @@
       </div>
       <div class="single-video-wrapper">
         <video class="custom-video-player" autoplay loop muted playsinline>
+          <source src="./assets/image/about3.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div> -->
+
+    <div class="video-row-container">
+      <div class="single-video-wrapper">
+        <div class="video-overlay-loader" id="loader1">
+          <div class="video-overlay-spinner"></div>
+        </div>
+        <video
+          class="custom-video-player"
+          autoplay
+          loop
+          muted
+          playsinline
+          id="video1"
+        >
+          <source src="./assets/image/about1.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="single-video-wrapper">
+        <div class="video-overlay-loader" id="loader2">
+          <div class="video-overlay-spinner"></div>
+        </div>
+        <video
+          class="custom-video-player"
+          autoplay
+          loop
+          muted
+          playsinline
+          id="video2"
+        >
+          <source src="./assets/image/about2.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="single-video-wrapper">
+        <div class="video-overlay-loader" id="loader3">
+          <div class="video-overlay-spinner"></div>
+        </div>
+        <video
+          class="custom-video-player"
+          autoplay
+          loop
+          muted
+          playsinline
+          id="video3"
+        >
           <source src="./assets/image/about3.mp4" type="video/mp4" />
         </video>
       </div>
@@ -497,6 +554,35 @@
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&callback=initMap"></script>
 
+    <!--  -->
+
+    <script>
+      const video = document.getElementById("videoElement");
+      const loader = document.getElementById("videoLoader");
+
+      video.addEventListener("canplaythrough", () => {
+        loader.style.display = "none";
+      });
+    </script>
+
+    <!--  -->
+
+    <script>
+      function hideLoader(videoId, loaderId) {
+        const video = document.getElementById(videoId);
+        const loader = document.getElementById(loaderId);
+
+        video.addEventListener("canplaythrough", () => {
+          loader.style.display = "none";
+        });
+      }
+
+      hideLoader("videoElement1", "videoLoader1");
+      hideLoader("videoElement2", "videoLoader2");
+      hideLoader("videoElement3", "videoLoader3");
+    </script>
+
+    <!--  -->
     <!-- captcha -->
 
     <script>

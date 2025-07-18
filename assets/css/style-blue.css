@@ -2107,6 +2107,13 @@ input::placeholder {
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
+
+
+.curOpen{
+  color: #0b2359;
+  font-weight: bold;
+}
+
 .header-navigation-wrapper--style5 .header-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3447,6 +3454,102 @@ input::placeholder {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/*  */
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+
+  .loading-text {
+    font-size: 12px;
+  }
+
+  .video-container video {
+    width: 126%;
+    height: 55vh !important;
+    object-fit: cover;
+    display: block;
+  }
+
+  .video-container {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    height: 30vh;
+    width: 100%;
+  }
+
+  .video-container video {
+    height: 100% !important;
+    width: 110%;
+  }
+
+  .spinner {
+    width: 24px;
+    height: 24px;
+    border-width: 2px;
+  }
+
+  .loading-text {
+    font-size: 11px;
+  }
+}
+
+/*  */
 /* Mobile Menu Overlay */
 .mobile-menu-overlay {
   position: fixed;
@@ -4538,6 +4641,12 @@ input::placeholder {
 
 /* mobile view */
 
+@media (max-width: 1024px) {
+  .f4f02_slider_wrapper {
+    height: 30vh;
+  }
+}
+
 @media (max-width: 768px) {
   /* Slider Section */
   .f4f02_slider_wrapper {
@@ -4603,7 +4712,7 @@ input::placeholder {
   }
 
   /* Video Row - Mobile Stack */
-  .video-row-container {
+  /* .video-row-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -4620,7 +4729,7 @@ input::placeholder {
     height: auto;
     max-height: 300px;
     object-fit: cover;
-  }
+  } */
 
   /* Section Titles and Contents */
   .section-titles {
@@ -6635,12 +6744,12 @@ input::placeholder {
 
 /*  */
 
-video {
-  /* position: fixed; */
+/* video {
+  
   width: 100%;
   height: 80vh;
   object-fit: cover;
-}
+} */
 
 .wrapper {
   max-width: 1500px;
@@ -6786,10 +6895,6 @@ video {
     right: 360px;
   } */
 
-  video {
-    height: auto !important;
-  }
-
   .section-titles {
     font-size: 26px;
     font-weight: bold;
@@ -6831,6 +6936,11 @@ video {
     justify-content: space-between;
     padding: 15px 0;
   }
+
+  .wrapper { 
+    padding: 30px 20px;
+  }
+}
 
   /* contact us */
 
@@ -6980,7 +7090,7 @@ video {
 
 /*  */
 
-.video-row-container {
+/* .video-row-container {
   display: flex;
   width: 100%;
   height: 600px;
@@ -7002,6 +7112,76 @@ video {
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
+} */
+
+.video-row-container {
+  display: flex;
+  width: 100%;
+  /* hei  ght: 600px; */
+  margin: 40px 0 90px 0;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+}
+
+.single-video-wrapper {
+  flex: 1;
+  padding: 5px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  /* height: 100vh; */
+}
+
+.custom-video-player {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Unique loader styles */
+.video-loader-wrapper {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-spinner {
+  width: 35px;
+  height: 35px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #333;
+  border-radius: 50%;
+  animation: video-spin 1s linear infinite;
+}
+
+@keyframes video-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive support */
+@media (max-width: 768px) {
+  .video-row-container {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .single-video-wrapper {
+    max-height: 700px;
+    height: 100%;
+  }
 }
 
 /*  */
