@@ -149,7 +149,7 @@
         <!-- Slide 1 -->
         <div
           class="infinite-slider-slide"
-          style="background-image: url('./assets/img/slider/slide_1.jpg')"
+          style="background-image: url('./assets/img/slider/slide_1.jpg ')"
         >
           <div class="infinite-slider-overlay"></div>
           <div class="infinite-slider-content">
@@ -469,10 +469,43 @@
     </div>
     <!--  -->
 
-    <div class="indosky-slider-container">
+    <!-- <div class="indosky-slider-container">
       <div class="indosky-slider-track" id="indoskySliderTrack">
-        <!-- Slides will be injected here -->
       </div>
+    </div> -->
+
+    <div class="indosky-container">
+      <video
+        class="indosky-video"
+        src="./assets/image/video-6.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+      <video
+        class="indosky-video"
+        src="./assets/image/video-3.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+      <video
+        class="indosky-video"
+        src="./assets/image/video-4.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+    </div>
+
+    <div class="video-container">
+      <video autoplay loop muted playsinline id="videoElement">
+        <source src="./assets/image/WEB-LOG-VIDEO.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
 
     <div
@@ -1245,61 +1278,7 @@
     <!--=====  End of JS files ======-->
 
     <!--=====  video slider ======-->
-    <script>
-      const indoskyVideos = [
-        "video-1.mp4",
-        "video-2.mp4",
-        "video-3.mp4",
-        "video-4.mp4",
-        "video-5.mp4",
-        "video-6.mp4",
-      ];
-      const indoskyBaseURL = "./assets/image/";
-      const indoskyTrack = document.getElementById("indoskySliderTrack");
-      const indoskyVisibleSlides = 5; // For reset condition
-      let indoskyIndex = 0;
 
-      // Repeat slides for infinite loop
-      const indoskyAllSlides = [
-        ...indoskyVideos,
-        ...indoskyVideos,
-        ...indoskyVideos,
-      ];
-
-      // Inject video slides into the track
-      indoskyAllSlides.forEach((videoFile) => {
-        const slideDiv = document.createElement("div");
-        slideDiv.className = "indosky-slide";
-        slideDiv.innerHTML = `
-        <video class="indosky-video" src="${
-          indoskyBaseURL + videoFile
-        }" autoplay muted loop playsinline></video>
-      `;
-        indoskyTrack.appendChild(slideDiv);
-      });
-
-      // Wait for layout to render before calculating width
-      window.addEventListener("load", () => {
-        const indoskySingleSlide = document.querySelector(".indosky-slide");
-        const indoskySlideWidth = indoskySingleSlide.offsetWidth;
-
-        setInterval(() => {
-          indoskyIndex++;
-          indoskyTrack.style.transition = "transform 0.5s ease-in-out";
-          indoskyTrack.style.transform = `translateX(-${
-            indoskyIndex * indoskySlideWidth
-          }px)`;
-
-          if (indoskyIndex >= indoskyAllSlides.length - indoskyVisibleSlides) {
-            setTimeout(() => {
-              indoskyTrack.style.transition = "none";
-              indoskyIndex = 0;
-              indoskyTrack.style.transform = `translateX(0px)`;
-            }, 600);
-          }
-        }, 5000); // Slide every 5s
-      });
-    </script>
     <!-- main slider  -->
 
     <script>
