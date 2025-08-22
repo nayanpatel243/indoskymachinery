@@ -20,7 +20,7 @@
 
       .f4f02_slider_wrapper {
         width: 100vw;
-        height: 60vh;
+        height: auto;
         overflow: hidden;
         position: relative;
       }
@@ -28,12 +28,12 @@
       .a3b73_slider_track {
         display: flex;
         width: calc(50vw * 12); /* 6 original + 6 cloned */
-        animation: x7c9a_scroll 45s linear infinite;
+        animation: x7c9a_scroll 50s linear infinite;
       }
 
       .m8e21_slide_item {
-        flex: 0 0 50vw;
-        height: 100vh;
+        flex: 0 0 60vw;
+        height: auto;
       }
 
       .m8e21_slide_item img {
@@ -46,7 +46,7 @@
           transform: translateX(0);
         }
         100% {
-          transform: translateX(-300vw); /* 6 slides * 50vw */
+          transform: translateX(-360vw); /* 6 slides * 50vw */
         }
       }
     </style>
@@ -217,7 +217,7 @@
     <div class="wrapper">
       <div class="content-block">
         <div class="section-titles">About</div>
-        <div class="section-block">
+        <div class="section-block additional">
           <div class="section-contents">
             With over a decade of unwavering commitment to the weaving industry,
             we have established ourselves as a trusted name in machine sales.
@@ -282,9 +282,6 @@
         <div class="m8e21_slide_item">
           <img src="./assets/image/6-min.png" alt="6" />
         </div>
-        <div class="m8e21_slide_item">
-          <img src="./assets/image/7-min.png" alt="6" />
-        </div>
 
         <!-- Clone for smooth infinite scroll -->
         <div class="m8e21_slide_item">
@@ -304,9 +301,6 @@
         </div>
         <div class="m8e21_slide_item">
           <img src="./assets/image/6-min.png" alt="6" />
-        </div>
-        <div class="m8e21_slide_item">
-          <img src="./assets/image/7-min.png" alt="6" />
         </div>
       </div>
     </div>
